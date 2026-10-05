@@ -13,3 +13,4 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 - Проєкт: http://localhost:6006/projects (назва `retention-agent`).
 - Вартість: Ollama безкоштовна, тому `$/run` рахується за **умовним тарифом Claude Haiku 4.5** ($1 / 1M вхідних, $5 / 1M вихідних токенів) з токенів LLM-спанів.
 - Дашборд: [docs/lab1/cost_dashboard.png](docs/lab1/cost_dashboard.png) — середній `$/run` ≈ $0.0014, latency по спанах і tool-ах.
+# notes
