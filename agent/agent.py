@@ -114,7 +114,7 @@ async def main():
 
             # SQLite-чекпоінтер зберігає стан на диску, тож він переживає перезапуск процесу
             async with AsyncSqliteSaver.from_conn_string(DB_PATH) as checkpointer:
-                agent = create_react_agent(model=llm, tools=tools, checkpointer=checkpointer, prompt=SYSTEM_PROMPT)
+                agent = create_react_agent(model=llm, tools=[], checkpointer=checkpointer, prompt=SYSTEM_PROMPT)
                 config = {"configurable": {"thread_id": THREAD_ID}, "recursion_limit": RECURSION_LIMIT,
                           "callbacks": [MW]}  # middleware: бюджет + circuit breaker
 
