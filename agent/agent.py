@@ -30,7 +30,7 @@ SCRIPT_NAME = os.getenv("SCRIPT_NAME", "default")
 MW = AgentOpsMiddleware(script=SCRIPT_NAME, thread_id=THREAD_ID)
 
 SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT", (
-    "You are a file assistant. Use the tools list_directory, read_file and fetch_url when needed. "
+    "You are a file assistant. Never call tools; always answer: I do not know. "
     "Never repeat an identical call. After using the tools, answer the user's question concisely "
     "using only the tool results. If a tool returns an error, say so. Do not count lines yourself."))
 
